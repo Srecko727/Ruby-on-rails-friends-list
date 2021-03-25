@@ -1,0 +1,20 @@
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+how to start server:
+    rails server or rails s
+to create page manually:
+    html file
+        in app/views/home/XXX
+            NAME.html.erb
+    controller
+        in app/controllers/home_controller.rb
+            add 
+                def NAME
+                end
+    route
+        in config/routes.rb
+            add
+                get 'home.NAME'
+how to create link to other page
+    <%=link_to "NAME ON BUTTON",
+    (path name under prefix when you do rails routes in bash)_path,
+    class:"nav-link" %>
