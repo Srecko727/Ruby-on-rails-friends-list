@@ -61,10 +61,6 @@ class FriendsController < ApplicationController
     end
   end
 
-  def correct_user
-    @friend = current_user.friends.find_by(id: params[:id])
-    redirect_to friends_path, notice "not authorized to edit this friend" if @friends.nil?
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
